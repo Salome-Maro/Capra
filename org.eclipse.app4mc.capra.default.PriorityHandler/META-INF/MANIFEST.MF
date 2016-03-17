@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: HudsonPriorityHandler
+Bundle-SymbolicName: org.eclipse.app4mc.capra.default.PriorityHandler;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Require-Bundle: org.eclipse.app4mc.capra.generic;bundle-version="1.0.0",
+ org.eclipse.mylyn.builds.core,
+ org.eclipse.app4mc.capra.default.Hudsonhandler;bundle-version="1.0.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
