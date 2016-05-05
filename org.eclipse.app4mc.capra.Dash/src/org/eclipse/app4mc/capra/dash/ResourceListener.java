@@ -79,6 +79,7 @@ public class ResourceListener implements IResourceChangeListener{
 					TracePersistenceAdapter tracePersistenceAdapter = ExtensionPointHelper.getTracePersistenceAdapter().get();
 					Optional<ArtifactWrapperContainer> awc = tracePersistenceAdapter.getArtifactWrappers(resourceSet);
 					Optional<EObject> tracemodel = tracePersistenceAdapter.getTraceModel(resourceSet);
+					if(! tracemodel.isPresent() || ! awc.isPresent()) return Status.OK_STATUS;
 					TraceMetamodelAdapter tracemetamodeladapter = ExtensionPointHelper.getTraceMetamodelAdapter().get();
 
 					URI uri = EcoreUtil.getURI(tracemodel.get());
